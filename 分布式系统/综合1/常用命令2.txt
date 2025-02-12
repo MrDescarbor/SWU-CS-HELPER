@@ -1,0 +1,102 @@
+1、更新环境变量
+source ~/.bashrc
+2、启动hadoop
+cd /usr/local/hadoop
+./sbin/start-dfs.sh  # 启动
+./sbin/stop-dfs.sh   # 关闭
+ http://localhost:50070 查看
+jps  查看启动成功没
+
+cd /usr/local/hive/hive
+./bin/hive
+
+3、启动pycharm
+pycharm.sh
+4、启动pyspark
+cd /usr/local/spark 
+ bin/pyspark
+5、hdfs操作
+cd  /usr/local/hadoop
+./bin/hdfs dfs -mkdir user
+   ./bin/hdfs dfs -ls user
+./bin/hdfs dfs -put ~/word.txt       #拷入
+./bin/hdfs dfs -get  user/word.txt   ~/下载      #拷出
+./bin/hdfs dfs -cat user/word.txt   #查看
+./bin/hdfs dfs -put  /usr/local/spark/mycode/rdd/word.txt   user
+6、Spark 操作
+1）生成SparkContext对象
+from pyspark import SparkContext, SparkConf
+from pyspark.sql import SparkSession
+conf = SparkConf().setMaster("local").setAppName("test5")
+sc = SparkContext(conf=conf)
+spark = SparkSession.builder.config(conf=SparkConf()).getOrCreate()
+lines1 = lines.map(lambda x:x.split(" "))
+7、启动mysql
+service mysql start
+sudo netstat -tap | grep mysql
+service mysql stop
+mysql shell界面：
+mysql -u root -p
+8、启动Hbase
+cd /usr/local/hbase
+sudo bin/start-hbase.sh
+bin/hbase shell
+
+9、解锁
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock
+10、配置Hbase
+sudo vim  conf/hbase-env.sh   #路径要在Hbase目录下
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_162
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_162
+11、 DataFrame查询
+df = spark.read.json("file:///usr/local/spark/examples/src/main/resources/people.json")
+df1 = df.createOrReplaceTempView("people")
+personsDF = spark.sql("select * from people")
+personsDF.show()
+12、flume
+cd /usr/local/flume
+
+13、python 目录
+14、启动 mysql
+service mysql start
+service mysql stop
+确认是否启动成功，mysql节点处于LISTEN状态表示启动成功：
+sudo netstat -tap | grep mysql
+mysql -u root -p
+exit
+
+
+whereis python3
+查看所有python的路径，不止一个
+which python3
+查看当前使用的python路径
+sudo apt install python3-pip
+
+14、安装 numpy
+sudo apt-get install python3-numpy 
+
+pip show numpy
+try:
+    import package_name
+except Exception as e:
+    print(e)
+
+
+sudo apt-get pyecharts
+sudo vim /etc/apt/sources.list
+
+
+ pip3 -V
+
+ sudo apt-get update
+ 
+
+pip3 install plotly==4.9.0
+下载
+sudo tar -zxvf ./sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz -C /usr/local
+sudo mv sqoop-1.4.6.bin__hadoop-2.0.4-alpha sqoop
+sudo chown -R hadoop sqoop  
+
+bin/sqoop export --connect jdbc:mysql://localhost:3306/dbtaobao1 --username root --password 1 --table user_log --export-dir '/user/hive/warehouse/dbtaobao1.db/inner_user_log' --fields-terminated-by ',';
+

@@ -1,0 +1,21 @@
+1、更新环境变量
+source ~/.bashrc
+2、启动hadoop
+cd /usr/local/hadoop
+./sbin/start-dfs.sh  # 启动
+./sbin/stop-dfs.sh   # 关闭
+ http://localhost:50070 查看
+jps  查看启动成功没
+3、启动pycharm
+pycharm.sh
+4、启动pyspark
+cd /usr/local/spark 
+ bin/pyspark
+5、hdfs操作
+./bin/hdfs dfs -mkdir user
+   ./bin/hdfs dfs -ls user
+./bin/hdfs dfs -put ~/word.txt  user   #拷入
+./bin/hdfs dfs -get  user/word.txt   ~/下载      #拷出
+./bin/hdfs dfs -cat user/word.txt   #查看
+
+6、
