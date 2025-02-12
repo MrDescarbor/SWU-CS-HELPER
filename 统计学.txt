@@ -1,0 +1,29 @@
+ 考试题型包括问答和上机两部分：
+问答部分（不需要写代码）：45分
+（1）判断 True or False（3个，共9分）
+（2）单向选择Multiple-Choice（5个，共15分）
+（3）简答Short answer（1个，21分）
+知识点：
+线性/广义线性回归的前提假设有哪些。
+根据数据描述，选择合适的拟合模型。（线性，泊松，二项）
+广义线性回归的链接函数分别是什么。
+广义线性回归会写拟合公式，会解释拟合公式。
+会解读自变量系数，掌握自变量变化对响应变量的影响，会计算和解读置信区间。会根据链接函数还原响应变量的变化区间。
+quasipoisson什么时候用，结果解释。
+如何检验广义线性回归数据是否符合假设的分布，解释结果。 1 - pchisq（）
+几种残差的适用选择。
+会根据模型似然值计算AIC/BIC，AIC/BIC大小代表什么意思，AIC, AICc 和 BIC差别，AIC适用模型。
+会根据GAM plot分析是否存在非线性关系。
+读ROC Curves写出sensitivity (true positive rate) and specificity (true negative rate)，计算混淆矩阵。
+
+上机部分（需要写代码）：55分
+知识点
+绘制散点图，不同类别的散点用颜色区分。
+会使用二项分布/泊松分布/ Quasi-binomial/ Quasi-poisson拟合数据，解读模型的dispersion参数的含义。
+绘制拟合模型残差分布图。
+会使用anova函数分析分类变量及交互项是否显著。
+会绘制几种残差图。
+掌握使用parametric bootstrap simulation和nonparametric bootstrap simulation估算参数和其置信区间。
+会通过GAM观察是否需要增加自变量的二次项。
+会使用dredge做model selection，会读取拟合的model。
+会获取拟合模型的ROC曲线，并计算相关的参数：Auc、Sensitivity、 Specificity、 Prediction error。
