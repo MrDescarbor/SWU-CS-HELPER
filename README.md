@@ -1,3 +1,19 @@
+# Southwest University Computer Science and Technology Cooperative Program Mutual Aid Repository
+
+## Foreword
+
+A few days ago, I accidentally deleted a portion of these materials. I feel regretful and reluctant, and at the same time, I suddenly realized that I haven't looked at them for a long time. I began to wonder if they still have any value remaining.
+
+For backup purposes, and since the value of things should not be judged by one individual, I believe they deserve a repository—an open repository.
+
+I hope they can shed a little light on your journey.
+
+## Contents
+
+The contents are categorized by course name into folders.
+
+If there is any infringement, please notify the repository administrator. We will remove the files.
+
 # 西南大学计算机科学与技术中外合作专业互助仓库
 
 
